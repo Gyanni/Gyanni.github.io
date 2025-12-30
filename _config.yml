@@ -3,7 +3,7 @@ author: Gyanni
 email: lghlee36@gmail.com
 url: https://www.abhinavsaxena.com/moonwalk # root address of the site
 description: > 
-  관심 분야 : 클라우드, 인프라, 웹 백엔드 개발
+  관심 분야 : 클라우드, 인프라, 웹 백엔드 개발\n
   관심 기술 : AWS, Docker, Kubernetes, Istio, Terraform, Jenkins, FastAPI, Spring Boot, C++
 permalink: /:slug
 
