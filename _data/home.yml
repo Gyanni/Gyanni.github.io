@@ -36,22 +36,21 @@ project_entries:
     desc: It also has a scalable vertical list (in case you need it)
 
 old_project_entries:
-  - title: Soopr
-    url: https://www.soopr.co
-    desc: Delight your readers - add beautiful share and like buttons easily to your websites 
-    highlight: NEW
+  - title: Email
+    url: mailto:lghlee36@gmail.com
+    desc: lghlee36@gmail.com
 
-  - title: Cookie
-    url: https://github.com/abhinavs/cookie
-    desc: An open source landing website with supporting pages and integrated blog
+  - title: GitHub
+    url: https://github.com/Gyanni
+    desc: Check out my repositories and contributions
 
-  - title: Moonwalk
-    url: https://github.com/abhinavs/moonwalk
-    desc: A fast and minimalist Jekyll blog theme with clean dark mode
+  - title: LinkedIn
+    url: https://www.linkedin.com/in/기환-이-03704b195/
+    desc: Professional profile and connections
 
-  - title: Humangous
-    url: https://www.humangous.co
-    desc: The better people know you, the better they collaborate
+  - title: BOJ (백준)
+    url: https://www.acmicpc.net/user/lghlee1
+    desc: Algorithm problem solving profile
 
 footer_entries:
   - title: abhinav's homepage
