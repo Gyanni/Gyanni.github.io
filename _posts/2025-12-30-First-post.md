@@ -6,7 +6,7 @@ categories: [Retrospect]
 tags: [jekyll]
 ---
 
-## 안녕하세요! 👋
+## 안녕하세요!
 
 드디어 **Jekyll**로 블로그를 만들었습니다.
 Ruby 버전 때문에 고생했지만, 이제 잘 돌아가네요.
