@@ -42,44 +42,59 @@ layout: default
     {{ content }}
 
 {% if site.theme_config.show_projects == true %}
-  <h2>{{ site.theme_config.home.title_projects }}</h2>
-  <div class="projects-grid">
-    {% include card_list.html collection=site.data.home.project_entries %}
-  </div>
+  <section class="home-section">
+    <div class="section-divider"></div>
+    <h2>{{ site.theme_config.home.title_projects }}</h2>
+    <div class="projects-grid">
+      {% include card_list.html collection=site.data.home.project_entries %}
+    </div>
+  </section>
 {% endif %}
 
 {% if site.theme_config.show_misc_list == true %}
-  <h2>{{ site.theme_config.home.title_misc_list }}</h2>
-  {% include vertical_list.html collection=site.data.home.misc_entries %}
+  <section class="home-section">
+    <div class="section-divider"></div>
+    <h2>{{ site.theme_config.home.title_misc_list }}</h2>
+    {% include vertical_list.html collection=site.data.home.misc_entries %}
+  </section>
 {% endif %}
 
 {% if site.theme_config.show_blog == true %}
-  <div class="section-header">
-    <h2>{{ site.theme_config.home.title_blog }}</h2>
-    <a href="{{ '/blog' | relative_url }}" class="more-link">더보기 →</a>
-  </div>
-  {% include post_list.html %}
+  <section class="home-section">
+    <div class="section-divider"></div>
+    <div class="section-header">
+      <h2>{{ site.theme_config.home.title_blog }}</h2>
+      <a href="{{ '/blog' | relative_url }}" class="more-link">더보기 →</a>
+    </div>
+    {% include post_list.html %}
+  </section>
 {% endif %}
 
 {% if site.certifications %}
-  <h2>{{ site.certifications.title }}</h2>
-  <ul class="cert-list">
-    {% for cert in site.certifications.items %}
-      <li class="cert-item">
-        <span class="cert-name">{{ cert.name }}</span>
-        <span class="cert-meta">{{ cert.issuer }} · {{ cert.date }}</span>
-      </li>
-    {% endfor %}
-  </ul>
+  <section class="home-section">
+    <div class="section-divider"></div>
+    <h2>{{ site.certifications.title }}</h2>
+    <ul class="cert-list">
+      {% for cert in site.certifications.items %}
+        <li class="cert-item">
+          <span class="cert-name">{{ cert.name }}</span>
+          <span class="cert-meta">{{ cert.issuer }} · {{ cert.date }}</span>
+        </li>
+      {% endfor %}
+    </ul>
+  </section>
 {% endif %}
 
 {% if site.theme_config.show_old_projects == true %}
-  <h2>{{ site.theme_config.home.title_old_projects }}</h2>
-  <div class="contact-links">
-    {% for item in site.data.home.old_project_entries %}
-      <a href="{{ item.url }}" class="contact-item">{{ item.title }}</a>
-    {% endfor %}
-  </div>
+  <section class="home-section">
+    <div class="section-divider"></div>
+    <h2>{{ site.theme_config.home.title_old_projects }}</h2>
+    <div class="contact-links">
+      {% for item in site.data.home.old_project_entries %}
+        <a href="{{ item.url }}" class="contact-item">{{ item.title }}</a>
+      {% endfor %}
+    </div>
+  </section>
 {% endif %}
 
 

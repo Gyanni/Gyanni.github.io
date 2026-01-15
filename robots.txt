@@ -1,0 +1,16 @@
+# robots.txt for Gyanni's Tech Blog
+# https://gyanni.github.io
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://gyanni.github.io/sitemap.xml
+
+# Disallow crawling of admin/system directories
+Disallow: /assets/
+Disallow: /_site/
+Disallow: /bin/
+
+# Disallow crawling of 404 page
+Disallow: /404.html

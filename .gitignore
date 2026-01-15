@@ -1,0 +1,31 @@
+# macOS 시스템 파일
+.DS_Store
+*.DS_Store
+
+# Jekyll 빌드 결과물
+_site/
+.jekyll-cache/
+.jekyll-metadata
+
+# Sass 캐시
+.sass-cache/
+
+# Ruby/Bundler
+*.gem
+.bundle/
+vendor/
+Gemfile.lock
+
+# IDE/에디터
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# 로그 파일
+*.log
+
+# 임시 파일
+*.tmp
+*.temp
