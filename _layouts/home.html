@@ -2,23 +2,50 @@
 layout: default
 ---
 
-<header>
-{% if site.theme_config.show_navbar == true %}
-  {% include horizontal_list.html collection=site.data.home.navbar_entries %}
-  <div class="dashed"></div>
-{% endif %}
+<div class="home-container">
+  {% include tag_sidebar.html %}
 
-  <h1>{{ site.title }}</h1>
-  {% if site.theme_config.show_description == true %}
-    <p>{{ site.description }}</p>
-  {% endif %}
-</header>
+  <div class="home-main">
+    <header>
+    {% if site.theme_config.show_navbar == true %}
+      {% include horizontal_list.html collection=site.data.home.navbar_entries %}
+      <div class="dashed"></div>
+    {% endif %}
 
-{{ content }}
+      <h1 class="site-title">{{ site.title }}</h1>
+
+      {% if site.interests or site.skills %}
+      <div class="intro-tags">
+        {% if site.interests %}
+        <div class="tag-section">
+          <span class="tag-label">{{ site.interests.title }}</span>
+          {% for item in site.interests.items %}
+            <span class="tag interest">{{ item }}</span>
+          {% endfor %}
+        </div>
+        {% endif %}
+        {% if site.skills %}
+        <div class="tag-section">
+          <span class="tag-label">{{ site.skills.title }}</span>
+          {% for item in site.skills.items %}
+            <span class="tag skill">
+              <img src="{{ item.icon }}" alt="{{ item.name }}" class="skill-icon">
+              {{ item.name }}
+            </span>
+          {% endfor %}
+        </div>
+        {% endif %}
+      </div>
+      {% endif %}
+    </header>
+
+    {{ content }}
 
 {% if site.theme_config.show_projects == true %}
   <h2>{{ site.theme_config.home.title_projects }}</h2>
-  {% include card_list.html collection=site.data.home.project_entries %}
+  <div class="projects-grid">
+    {% include card_list.html collection=site.data.home.project_entries %}
+  </div>
 {% endif %}
 
 {% if site.theme_config.show_misc_list == true %}
@@ -27,13 +54,32 @@ layout: default
 {% endif %}
 
 {% if site.theme_config.show_blog == true %}
-  <h2>{{ site.theme_config.home.title_blog }}</h2>
+  <div class="section-header">
+    <h2>{{ site.theme_config.home.title_blog }}</h2>
+    <a href="{{ '/blog' | relative_url }}" class="more-link">더보기 →</a>
+  </div>
   {% include post_list.html %}
+{% endif %}
+
+{% if site.certifications %}
+  <h2>{{ site.certifications.title }}</h2>
+  <ul class="cert-list">
+    {% for cert in site.certifications.items %}
+      <li class="cert-item">
+        <span class="cert-name">{{ cert.name }}</span>
+        <span class="cert-meta">{{ cert.issuer }} · {{ cert.date }}</span>
+      </li>
+    {% endfor %}
+  </ul>
 {% endif %}
 
 {% if site.theme_config.show_old_projects == true %}
   <h2>{{ site.theme_config.home.title_old_projects }}</h2>
-  {% include card_list.html collection=site.data.home.old_project_entries %}
+  <div class="contact-links">
+    {% for item in site.data.home.old_project_entries %}
+      <a href="{{ item.url }}" class="contact-item">{{ item.title }}</a>
+    {% endfor %}
+  </div>
 {% endif %}
 
 
@@ -43,3 +89,6 @@ layout: default
     {% include horizontal_list.html collection=site.data.home.footer_entries %}
   </footer>
 {% endif %}
+
+  </div><!-- .home-main -->
+</div><!-- .home-container -->

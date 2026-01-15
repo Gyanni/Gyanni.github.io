@@ -1,0 +1,51 @@
+{% comment %}
+  Collapsible tag sidebar component
+  Shows all tags and their associated posts
+{% endcomment %}
+
+{% assign all_tags = site.posts | map: "tags" | flatten | uniq | sort %}
+
+<aside class="tag-sidebar">
+  <div class="tag-sidebar-header" onclick="toggleTagSidebar()">
+    <span class="tag-sidebar-title">Tags</span>
+    <span class="tag-sidebar-toggle">▼</span>
+  </div>
+  <nav class="tag-sidebar-content">
+    {% for tag in all_tags %}
+      {% assign tag_posts = site.posts | where_exp: "post", "post.tags contains tag" %}
+      <div class="tag-group">
+        <div class="tag-item" onclick="toggleTagPosts('{{ tag | slugify }}')">
+          <span class="tag-name">{{ tag }}</span>
+          <span class="tag-count">({{ tag_posts.size }})</span>
+          <span class="tag-arrow">›</span>
+        </div>
+        <ul class="tag-posts" id="posts-{{ tag | slugify }}">
+          {% for post in tag_posts %}
+            <li>
+              <span class="post-date-small">{{ post.date | date: "%Y-%m-%d" }}</span>
+              <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+            </li>
+          {% endfor %}
+        </ul>
+      </div>
+    {% endfor %}
+  </nav>
+</aside>
+
+<script>
+function toggleTagSidebar() {
+  const sidebar = document.querySelector('.tag-sidebar');
+  const toggle = document.querySelector('.tag-sidebar-toggle');
+  sidebar.classList.toggle('collapsed');
+  toggle.textContent = sidebar.classList.contains('collapsed') ? '▶' : '▼';
+}
+
+function toggleTagPosts(tagSlug) {
+  const postsList = document.getElementById('posts-' + tagSlug);
+  const tagItem = postsList.previousElementSibling;
+  const arrow = tagItem.querySelector('.tag-arrow');
+
+  postsList.classList.toggle('expanded');
+  arrow.classList.toggle('rotated');
+}
+</script>

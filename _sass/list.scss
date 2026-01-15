@@ -55,3 +55,44 @@ ul.horizontal-list {
     }
   }
 }
+
+/* Contact & Links section - simple inline style */
+.contact-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5em 1.5em;
+  margin-top: -0.8em;
+
+  .contact-item {
+    color: var(--links);
+    text-decoration: none;
+    font-size: 0.95em;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+/* Projects section - 2x2 grid */
+.projects-grid {
+  ul.horizontal-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1em;
+    margin-left: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  li.card {
+    width: auto;
+    margin: 0;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .projects-grid ul.horizontal-list {
+    grid-template-columns: 1fr;
+  }
+}

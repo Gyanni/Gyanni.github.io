@@ -2,10 +2,58 @@ title: Gyanni's Tech Blog
 author: Gyanni
 email: lghlee36@gmail.com
 url: https://www.abhinavsaxena.com/moonwalk # root address of the site
-description: >
-  관심 분야 : 클라우드, 인프라, 웹 백엔드 개발<br>
-  관심 기술 : AWS, Docker, Kubernetes, Istio, Terraform, Jenkins, FastAPI, Spring Boot
+description: ""
 permalink: /:slug
+
+# Interests section
+interests:
+  title: "Interests"
+  items:
+    - 웹 백엔드 개발
+    - 클라우드
+    - 인프라
+
+skills:
+  title: "Tech Stack"
+  items:
+    # Backend
+    - name: Java
+      icon: https://cdn.simpleicons.org/openjdk/ED8B00
+    - name: Python
+      icon: https://cdn.simpleicons.org/python/3776AB
+    - name: Spring Boot
+      icon: https://cdn.simpleicons.org/springboot/6DB33F
+    - name: FastAPI
+      icon: https://cdn.simpleicons.org/fastapi/009688
+    # Database
+    - name: MySQL
+      icon: https://cdn.simpleicons.org/mysql/4479A1
+    - name: PostgreSQL
+      icon: https://cdn.simpleicons.org/postgresql/4169E1
+    - name: MongoDB
+      icon: https://cdn.simpleicons.org/mongodb/47A248
+    # Cloud & Infra
+    - name: AWS
+      icon: https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-plain-wordmark.svg
+    - name: Docker
+      icon: https://cdn.simpleicons.org/docker/2496ED
+    - name: Kubernetes
+      icon: https://cdn.simpleicons.org/kubernetes/326CE5
+    - name: Terraform
+      icon: https://cdn.simpleicons.org/terraform/844FBA
+    # CI/CD
+    - name: Jenkins
+      icon: https://cdn.simpleicons.org/jenkins/D24939
+
+certifications:
+  title: "Certifications"
+  items:
+    - name: "자격증 예시 1"
+      date: "2024-01-15"
+      issuer: "발급기관 예시"
+    - name: "자격증 예시 2"
+      date: "2023-06-20"
+      issuer: "발급기관 예시"
 
 favicon: "./logo.png" # relative path to site's favicon
 
@@ -16,9 +64,9 @@ github:
 remote_theme: abhinavs/moonwalk
 
 theme_config:
-  appearance: "dark" # can be "light", "dark" or "auto"
+  appearance: "light" # can be "light", "dark" or "auto"
   appearance_toggle: true # if appearance can be switched by user
-  back_home_text: "home.." # customize text for homepage link in post layout
+  back_home_text: "← Home" # customize text for homepage link in post layout
   date_format: "%Y-%m-%d" # customize how date is formatted
   show_description: true # show blog description
   show_navbar: true # show horizontal navbar
