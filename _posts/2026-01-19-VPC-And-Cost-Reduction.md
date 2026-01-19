@@ -38,26 +38,16 @@ OS 별로 패키지 매니저를 통해 간단하게 설치할 수 있습니다.
 **macOS (Homebrew)**
 ```bash
 brew install cloud-nuke
-Windows (Chocolatey)
 ```
 <br>
 
 **Window**
-```Bash
+```bash
 choco install cloud-nuke
-Linux (Script)
 ```
 <br>
 
-**Linux**
-```Bash
-# 최신 바이너리 다운로드 (버전은 GitHub Release 확인 필요)
-wget [https://github.com/gruntwork-io/cloud-nuke/releases/download/v0.1.0/cloud-nuke_linux_amd64](https://github.com/gruntwork-io/cloud-nuke/releases/download/v0.1.0/cloud-nuke_linux_amd64)
-mv cloud-nuke_linux_amd64 cloud-nuke
-chmod +x cloud-nuke
-sudo mv cloud-nuke /usr/local/bin
-```
-<br>
+
 
 ### 2-3. 실행 그리고 실패
 

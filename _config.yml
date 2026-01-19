@@ -4,6 +4,7 @@ email: lghlee36@gmail.com
 url: https://www.abhinavsaxena.com/moonwalk # root address of the site
 description: ""
 permalink: /:slug
+timezone: Asia/Seoul
 
 # Interests section
 interests:
@@ -19,19 +20,13 @@ skills:
     # Backend
     - name: Java
       icon: https://cdn.simpleicons.org/openjdk/ED8B00
-    - name: Python
-      icon: https://cdn.simpleicons.org/python/3776AB
     - name: Spring Boot
       icon: https://cdn.simpleicons.org/springboot/6DB33F
-    - name: FastAPI
-      icon: https://cdn.simpleicons.org/fastapi/009688
     # Database
     - name: MySQL
       icon: https://cdn.simpleicons.org/mysql/4479A1
     - name: PostgreSQL
       icon: https://cdn.simpleicons.org/postgresql/4169E1
-    - name: MongoDB
-      icon: https://cdn.simpleicons.org/mongodb/47A248
     # Cloud & Infra
     - name: AWS
       icon: https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-plain-wordmark.svg
@@ -44,6 +39,8 @@ skills:
     # CI/CD
     - name: Jenkins
       icon: https://cdn.simpleicons.org/jenkins/D24939
+    - name: GitHub Actions
+      icon: https://cdn.simpleicons.org/githubactions/2088FF
 
 certifications:
   title: "Certifications"
@@ -77,7 +74,7 @@ theme_config:
   show_blog: true # show blog posts added in _posts
   show_old_projects: true # show old projects as cards, add in _data/home.yml
   show_misc_list: false # show generic vertical list for misc details, add _data/home.yml
-  show_reading_time: true # show number of words and reading time in the blog posts
+  show_reading_time: false # show number of words and reading time in the blog posts
   show_tags: true # show tags in a blog posts
   # options for "home" page
   home:
