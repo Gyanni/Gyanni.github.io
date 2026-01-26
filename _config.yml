@@ -45,12 +45,12 @@ skills:
 certifications:
   title: "Certifications"
   items:
-    - name: "자격증 예시 1"
-      date: "2024-01-15"
-      issuer: "발급기관 예시"
-    - name: "자격증 예시 2"
-      date: "2023-06-20"
-      issuer: "발급기관 예시"
+    - name: "정보처리기사"
+      date: "2026-01-01"
+      issuer: "한국산업인력공단"
+    - name: "CCNA"
+      date: "2026-01-01"
+      issuer: "Cisco"
 
 favicon: "./logo.png" # relative path to site's favicon
 
